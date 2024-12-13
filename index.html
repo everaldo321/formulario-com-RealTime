@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lista Negra do Sheldon</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <link rel='stylesheet' type="text/css" media='print' href="print.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lista Negra do Sheldon</h1>
+        <img src="img/sheldon.png" >
+        <div class="buscador-container">
+            <form id="formulario">
+                <input type="text" name="nome" placeholder="*Nome completo" required/>
+                <input type="text" name="data" placeholder="*Data do Ocorrido" id="data" oninput="mascaraData()" maxlength="8" required/>
+                <input type="text" name="obs" placeholder="Observações" required/>
+                <button id = "Enviar">Enviar</button>
+            </form>
+
+        </div>
+    <main>
+        <table>
+            <thead>
+                <tr >
+                    <td class="sem">Id</td>
+                    <td>Nome</td>
+                    <td>Data</td>
+                    <td>Observaçoes</td>
+                    <td class = "sem" >Ações</td>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela"></tbody>
+        </table>
+        <button class="print" onclick="javascript:window.print()">Imprimir</button>
+    </main>
+    <script src='main1.js'></script>
+</body>
+
+</html>
